@@ -14,4 +14,4 @@
    
   Install pygame library using: "pip install pygame" in windows/MacOS/Linux cmd/terminal.
     
-  ## Build and maintained by: #47seconds
+  ## Build and maintained by: 47seconds
