@@ -1,4 +1,4 @@
-  ## SPACE INVADERS <hr>
+  ## SPACE INVADERS
 
   This is a pygame based game made and to be executed in Python 3.
 
