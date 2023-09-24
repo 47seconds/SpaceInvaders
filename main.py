@@ -65,15 +65,15 @@ pygame.init()
 
 # defining screen
 screen = pygame.display.set_mode((800, 600))  # <-----screen dimensions
-background = pygame.image.load('SpaceInvaders\\icons\\Background.jpg')
+background = pygame.image.load('icons\\Background.jpg')
 
 # game title and icon
 pygame.display.set_caption("Space Invaders")
-title_icon = pygame.image.load('SpaceInvaders\\icons\\ufo.png')
+title_icon = pygame.image.load('icons\\ufo.png')
 pygame.display.set_icon(title_icon)
 
 # Adding Player
-player_icon = pygame.image.load('SpaceInvaders\\icons\\spaceship.png')
+player_icon = pygame.image.load('icons\\spaceship.png')
 player_X = 370
 player_Y = 480
 player_speed_X = 0
@@ -88,14 +88,14 @@ enemy_speed_X = []
 enemy_speed_Y = []
 
 for i in range(no_of_enemies):
-    enemy_icon = pygame.image.load('SpaceInvaders\\icons\\Enemy.png')
+    enemy_icon = pygame.image.load('icons\\Enemy.png')
     enemy_X.append(random.randint(30, 706))
     enemy_Y.append(random.randint(50, 150))
     enemy_speed_X.append(0.3)
     enemy_speed_Y.append(0.02)
 
 # Adding bullets
-bullet = pygame.image.load('SpaceInvaders\\icons\\player_bullet.png')
+bullet = pygame.image.load('icons\\player_bullet.png')
 bullet_X = 0  # <-----These can be anything as we just need parameter,
 bullet_Y = 0  # <-----later these will be overwritten anyways.
 bullet_speed_Y = 0.45
@@ -144,16 +144,16 @@ def showScore(x, y):
     screen.blit(score, (x, y))
 
 # Defining sounds
-mixer.music.load('SpaceInvaders\\sounds\\background_ost2.wav')  # <----Background ost
+mixer.music.load('sounds\\background_ost2.wav')  # <----Background ost
 mixer.music.play(-1)  # <-----Loop music in infinite state
 
-bullet_sound = mixer.Sound('SpaceInvaders\\sounds\\bullet_sound.wav')
+bullet_sound = mixer.Sound('sounds\\bullet_sound.wav')
 
-explosion_sound = mixer.Sound('SpaceInvaders\\sounds\\explosion.wav')
+explosion_sound = mixer.Sound('sounds\\explosion.wav')
 
 # Game Over screen and sound
 font_GameOver = pygame.font.Font('freesansbold.ttf', 64)
-game_over_sound = mixer.Sound('SpaceInvaders\\sounds\\game_over.wav')
+game_over_sound = mixer.Sound('sounds\\game_over.wav')
 
 end=1  #<----helps to play GAME OVER sound once only
 def game_over(end):
